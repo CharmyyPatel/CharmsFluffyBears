@@ -1,6 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-// using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CharmsFluffyBears.Models
 {
@@ -8,16 +8,16 @@ namespace CharmsFluffyBears.Models
     {
         public int Id { get; set; }
 
-       // [Display(Name = "Product Name")]
+        [Display(Name = "Product Name")]
         public string ProductName { get; set; }
 
-       // [Display(Name = "Product Description ")]
+        [Display(Name = "Product Description ")]
 
         public string ProductDescription { get; set; }
         public string Size { get; set; }
         public string Colour { get; set; }
 
-       // [Column(TypeName = "decimal(18, 2)")]
+        [Column(TypeName = "decimal(18, 2)")]
         public decimal Price { get; set; }
     }
 }
