@@ -20,7 +20,7 @@ namespace CharmsFluffyBears.Controllers
         }
 
         // GET: FluffyBears
-        public async Task<IActionResult> Index(string SoapBrand, string searchString)
+        public async Task<IActionResult> Index(string FluffyBearsSize, string searchString)
         {
             // Use LINQ to get list of genres.
             IQueryable<string> genreQuery = from m in _context.FluffyBears
@@ -35,18 +35,18 @@ namespace CharmsFluffyBears.Controllers
                 FluffyBears = FluffyBears.Where(s => s.ProductName.Contains(searchString));
             }
 
-            if (!string.IsNullOrEmpty(SoapBrand))
+            if (!string.IsNullOrEmpty(FluffyBearsSize))
             {
-                FluffyBears = FluffyBears.Where(x => x.Size == SoapBrand);
+                FluffyBears = FluffyBears.Where(x => x.Size == FluffyBearsSize);
             }
 
-            var SoapBrandVM = new FluffyBearsSizeViewModel
+            var FluffyBearsSizeVM = new FluffyBearsSizeViewModel
             {
                 Size = new SelectList(await genreQuery.Distinct().ToListAsync()),
                 FluffyBears = await FluffyBears.ToListAsync()
             };
 
-            return View(SoapBrandVM);
+            return View(FluffyBearsSizeVM);
         }
 
         // GET: FluffyBears/Details/5
