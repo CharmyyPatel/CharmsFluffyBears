@@ -9,4 +9,10 @@
 15:51 - Seeded the Database
 16:03 - Added seed Initilizer and edited Program.cs accordingly.
 16:13 - Seeded Data was displayed properly while running App.
-​
+18:19 - Added DataAnnotations Schema to display the names of Product and its description for customers readability.
+19:02 - Checked all the links i.e., Edit, Delete, Details that they are working properly or not. Solved some errors in the Details.cshtml regarding name of columns.
+19:33 - Successfully completed adding controller methods and views in ASP.NET Core which mans Part 6 is done.
+21:07 - Did household chores... Also had my dinner. Lets start with Part 7
+21:42 - Added search by Product Name and Size to filter between products. Also added Images to the wwwroot folder which loaded successfully while running the App.
+10:17 - Completed whole tutorail.. finallyyyyyy... by adding CSS to it.
+10:20 - Now I will start to publish this on the Azure.
